@@ -1,5 +1,8 @@
-from flask import Flask
-from .views import views
+try:
+    from flask import Flask
+    from views import views
+except Exception as e:
+    print(f'error occured: {e}')
 
 app = Flask(__name__)
 app.config['SECRECT_KEY'] = 'jsodhsbosjdbsjsjsjsbd'
